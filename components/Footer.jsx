@@ -1,7 +1,7 @@
-import Image from 'next/image'
-import React from 'react'
-import { FooterData } from '@/data/data.js'
-import Link from 'next/link'
+import Image from "next/image";
+import React from "react";
+import { FooterData } from "@/data/data.js";
+import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="relative overflow-hidden bg-white pt-20 dark:bg-dark-300">

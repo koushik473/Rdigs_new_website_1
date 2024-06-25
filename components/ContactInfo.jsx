@@ -1,7 +1,7 @@
-'use client'
+"use client";
 import { fadeUpAnimation } from '@/data/animation'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
+import Link from "next/link";
+import { motion } from "framer-motion"
 const ContactInfo = () => {
   return (
     <section className=" relative pb-150">

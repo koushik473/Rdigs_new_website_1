@@ -2,7 +2,7 @@ import ContactForm from '@/components/ContactForm'
 import ContactInfo from '@/components/ContactInfo'
 import NewsLetter from '@/components/NewsLetter'
 import PageHero from '@/components/heros/PageHero'
-import React from 'react'
+import React from "react";
 
 const page = () => {
   return (

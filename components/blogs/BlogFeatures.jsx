@@ -1,6 +1,6 @@
-'use client'
-import Image from 'next/image'
-import Link from 'next/link'
+"use client";
+import Image from "next/image";
+import Link from "next/link";
 import ReactMarkdown from 'react-markdown'
 import { Pagination } from 'swiper/modules'
 

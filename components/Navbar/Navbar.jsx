@@ -1,10 +1,9 @@
-'use client'
+"use client";
 
-import PrimaryNavbar from './PrimaryNavbar';
+import PrimaryNavbar from './PrimaryNavbar'
 
 const Navbar = () => {
-  return <PrimaryNavbar />;
-};
+  return <PrimaryNavbar />
+}
 
-export default Navbar;
-
+export default Navbar

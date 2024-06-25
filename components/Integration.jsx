@@ -1,7 +1,7 @@
-'use client'
+"use client";
 import { gsap, MotionPathPlugin } from 'gsap/all'
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
 import { useEffect } from 'react'
 const Integration = () => {
   useEffect(() => {

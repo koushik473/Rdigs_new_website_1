@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Pagination = ({ paginateFunction }) => {
   const { totalPage, currentPage, setCurrentPage, goToNextPage, goToPreviousPage } = paginateFunction
@@ -14,9 +14,8 @@ const Pagination = ({ paginateFunction }) => {
             onClick={() => {
               goToPreviousPage()
             }}
-            className={`group flex h-10 w-10 items-center justify-center rounded-full border border-borderColor  text-sm  font-medium duration-300 dark:border-borderColor-dark ${
-              currentPage === 1 ? 'disabled:opacity-7 cursor-not-allowed' : 'cursor-pointer hover:bg-primary'
-            }`}
+            className={`group flex h-10 w-10 items-center justify-center rounded-full border border-borderColor  text-sm  font-medium duration-300 dark:border-borderColor-dark ${currentPage === 1 ? 'disabled:opacity-7 cursor-not-allowed' : 'cursor-pointer hover:bg-primary'
+              }`}
             disabled={currentPage === 1}>
             <FontAwesomeIcon
               icon={faArrowLeft}
@@ -40,9 +39,8 @@ const Pagination = ({ paginateFunction }) => {
             onClick={() => {
               goToNextPage()
             }}
-            className={`group flex h-10 w-10 items-center justify-center rounded-full border border-borderColor  text-sm  font-medium duration-300 dark:border-borderColor-dark  ${
-              currentPage === totalPage ? 'disabled:opacity-7 cursor-not-allowed' : 'cursor-pointer hover:bg-primary'
-            }`}
+            className={`group flex h-10 w-10 items-center justify-center rounded-full border border-borderColor  text-sm  font-medium duration-300 dark:border-borderColor-dark  ${currentPage === totalPage ? 'disabled:opacity-7 cursor-not-allowed' : 'cursor-pointer hover:bg-primary'
+              }`}
             disabled={currentPage === totalPage}>
             <FontAwesomeIcon
               icon={faArrowRight}

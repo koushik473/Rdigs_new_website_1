@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import React from 'react'
+import Link from "next/link";
+import React from "react";
 
 const CtaV2 = () => {
   return (
@@ -13,13 +13,16 @@ const CtaV2 = () => {
         <div className="absolute -bottom-[350px] left-1/2 -z-10 h-full w-full -translate-x-1/2 bg-[url('/images/hero-gradient.png')]  bg-contain bg-center bg-no-repeat p-[350px] opacity-70 md:hidden"></div>
         <div className=" mx-auto text-center">
           <h2 className="mb-5 text-[48px] font-semibold max-lg:text-[32px]">
-            Let's Talk best payment <br />
+            Let &apos;s Talk best payment <br />
             experience now!
           </h2>
+
           <p className="mx-auto mb-12 max-w-[400px] max-lg:mt-6">
-            Transform Your Business with Our Custom Web Design Services!
-Embark on your best payment experience today by bringing your vision to life with our tailored web design solutions.
+            Transform Your Business with Our Custom Web Design Services &Embark
+            Embark on your best payment experience today by bringing your vision
+            to life with our tailored web design solutions.
           </p>
+
           <Link href="/contact" className="btn">
             Get Started Today
           </Link>
@@ -31,7 +34,8 @@ Embark on your best payment experience today by bringing your vision to life wit
                 viewBox="0 0 20 20"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="mr-3">
+                className="mr-3"
+              >
                 <path
                   d="M14.125 7.75L8.62497 13L5.875 10.375M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
                   stroke=""
@@ -50,7 +54,8 @@ Embark on your best payment experience today by bringing your vision to life wit
                 viewBox="0 0 20 20"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="mr-3">
+                className="mr-3"
+              >
                 <path
                   d="M14.125 7.75L8.62497 13L5.875 10.375M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
                   stroke=""
@@ -69,7 +74,8 @@ Embark on your best payment experience today by bringing your vision to life wit
                 viewBox="0 0 20 20"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="mr-3">
+                className="mr-3"
+              >
                 <path
                   d="M14.125 7.75L8.62497 13L5.875 10.375M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
                   stroke=""
@@ -85,7 +91,6 @@ Embark on your best payment experience today by bringing your vision to life wit
         </div>
       </div>
     </section>
-  )
-}
-
-export default CtaV2
+  );
+};
+export default CtaV2;

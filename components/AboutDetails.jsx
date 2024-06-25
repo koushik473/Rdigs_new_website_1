@@ -1,6 +1,6 @@
-'use client'
+"use client";
 import { AboutImages } from '@/data/data'
-import Image from 'next/image'
+import Image from "next/image";
 
 const AboutDetails = () => {
   return (
@@ -29,8 +29,12 @@ const AboutDetails = () => {
           </div>
           <div className="max-w-[590px] py-10 max-md:col-span-full md:col-span-6">
             <p>
-            RDIGS was founded by a group of individuals who all came from sales and B2B lead generation backgrounds and brought 15+ years of experience to the table. They noticed a significant gap in the market and were determined to eliminate it. Despite being technology- driven, the company values the importance of human connection and ensures every client receives a personalized experience. At RDIGS, we pride ourselves on our ability to bridge the gap between technology and human interaction to provide exceptional lead generation services.
-              
+              RDIGS was founded by a group of individuals who all came from sales and B2B lead generation backgrounds
+              and brought 15+ years of experience to the table. They noticed a significant gap in the market and were
+              determined to eliminate it. Despite being technology- driven, the company values the importance of human
+              connection and ensures every client receives a personalized experience. At RDIGS, we pride ourselves on
+              our ability to bridge the gap between technology and human interaction to provide exceptional lead
+              generation services.
             </p>
           </div>
         </div>

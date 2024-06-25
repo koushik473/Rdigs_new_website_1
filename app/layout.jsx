@@ -4,7 +4,6 @@ import ThemeSwitcher from '@/components/ThemeSwitcher'
 import '@/scss/theme.scss'
 import Providers from '@/utils/providers'
 
-
 import { Inter, Playfair_Display, Plus_Jakarta_Sans } from 'next/font/google'
 
 const inter = Inter({

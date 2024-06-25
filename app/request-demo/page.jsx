@@ -1,7 +1,7 @@
-'use client'
+"use client";
 import NewsLetter from '@/components/NewsLetter'
 import { fadeUpAnimation } from '@/data/animation'
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion"
 import useWhileInView from '@/hooks/useWhileInView'
 import { useRef } from 'react'
 const RequestDemo = () => {

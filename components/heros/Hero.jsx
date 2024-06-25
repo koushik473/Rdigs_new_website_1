@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { fadeFromLeftAnimation, fadeFromRightAnimation, fadeUpAnimation } from '@/data/animation'
 import useWhileInView from '@/hooks/useWhileInView'
 import visionImage2Light from '@/public/images/vision/vision-image-1.png'
@@ -6,11 +6,8 @@ import visionImage3Light from '@/public/images/vision/vision-image-2.png'
 import visionImage2Dark from '@/public/images/vision/vision-image-dark-1.png'
 import visionImage3Dark from '@/public/images/vision/vision-image-dark-2.png'
 import { default as visionImageOneDark, default as visionImageOneLight } from '@/public/images/vision/vision-image.png'
-import { faCheck } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { motion } from 'framer-motion'
-import Image from 'next/image'
-import Link from 'next/link'
+import { motion } from "framer-motion"
+import Image from "next/image";
 import { useRef } from 'react'
 
 const Hero = () => {
@@ -115,8 +112,6 @@ const Hero = () => {
       <div className="container relative z-10">
         <div className="grid grid-cols-2 items-end gap-10 max-md:grid-cols-1 1xl:gap-x-24">
           <div>
-            
-            
             <h1 className="mb-12 max-md:mb-8">
               Make your{' '}
               <span className="inline-block rounded-[88px] border-2 border-paragraph bg-[#D9D9D900] px-5 pb-2.5 pt-0.5 font-playfair italic leading-none dark:border-[#F0F3EA]">
@@ -188,7 +183,5 @@ const Hero = () => {
     </section>
   )
 }
-
-
 
 export default Hero

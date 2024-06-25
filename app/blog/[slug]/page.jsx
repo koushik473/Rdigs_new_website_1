@@ -1,7 +1,7 @@
 import PageHero from '@/components/heros/PageHero'
 import getMarkDownContent from '@/utils/getMarkDownContent'
 import getMarkDownData from '@/utils/getMarkDownData'
-import Image from 'next/image'
+import Image from "next/image";
 import ReactMarkdown from 'react-markdown'
 
 export async function generateStaticParams() {

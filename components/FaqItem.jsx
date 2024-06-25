@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useRef } from 'react'
 
 const FaqItem = ({ question, answer, isOpen, onClick }) => {

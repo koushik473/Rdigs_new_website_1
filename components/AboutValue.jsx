@@ -1,12 +1,12 @@
-'use client'
-import Image from 'next/image'
-import React from 'react'
+"use client";
+import Image from "next/image";
+import React from "react";
 import imageOnlineValue from '../public/images/about/onlinePayment.png'
 import imageOnlineValueDark from '../public/images/about/onlinePayment-dark.png'
 import imageShape from '../public/images/about/onlinePayment-shape.png'
 import imageShapeDark from '../public/images/about/onlinePayment-shape-dark.png'
 import { fadeFromRightAnimation, fadeUpAnimation } from '@/data/animation'
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion"
 import useWhileInView from '@/hooks/useWhileInView'
 import { useRef } from 'react'
 const AboutValue = () => {
@@ -52,7 +52,10 @@ const AboutValue = () => {
 
             <h2 className=" mb-8 max-md:mb-4">Excellence, Innovation, Partnership: Driving Your Success Together.</h2>
             <p className="mb-11  max-md:mb-6">
-            At RDIGS, our core values—Excellence, Innovation, and Partnership—guide our approach to B2B lead generation. We strive for exceptional quality, embrace cutting-edge technologies and data insights for continuous improvement, and foster strong client relationships for mutual success. These values drive us to deliver impactful results tailored to your business needs.
+              At RDIGS, our core values—Excellence, Innovation, and Partnership—guide our approach to B2B lead
+              generation. We strive for exceptional quality, embrace cutting-edge technologies and data insights for
+              continuous improvement, and foster strong client relationships for mutual success. These values drive us
+              to deliver impactful results tailored to your business needs.
             </p>
             <ul className="mb-14 [&>*:not(:last-child)]:mb-6 max-md:[&>*:not(:last-child)]:mb-4">
               <li className="flex items-center gap-x-2 ">

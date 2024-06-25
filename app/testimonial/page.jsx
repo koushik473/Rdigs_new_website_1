@@ -13,7 +13,7 @@ const Testimonial = () => {
       />
       <TestimonialSingle />
       <Clients sectionTitle={false} spacing={'pt-0 pb-0'} />
-      
+
       <NewsLetter />
     </>
   )

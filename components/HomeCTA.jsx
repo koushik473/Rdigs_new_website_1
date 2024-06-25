@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 const HomeCta = () => {
   return (
@@ -97,8 +97,8 @@ const HomeCta = () => {
             Trial Today.
           </h2>
           <p className="mx-auto mb-12 max-w-[400px] max-lg:mt-6">
-            Transform Your Business with Our Custom Web Design Services!
-Embark on your best payment experience today by bringing your vision to life with our tailored web design solutions.
+            Transform Your Business with Our Custom Web Design Services! Embark on your best payment experience today by
+            bringing your vision to life with our tailored web design solutions.
           </p>
           <Link href="/contact" className="btn">
             Get Started Today

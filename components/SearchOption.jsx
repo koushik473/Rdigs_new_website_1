@@ -1,7 +1,7 @@
-'use client'
+"use client";
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Link from 'next/link'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 
 const SearchOption = ({ onClose }) => {
   return (
@@ -14,10 +14,7 @@ const SearchOption = ({ onClose }) => {
               <button onClick={onClose} className="text-paragraph dark:text-white" id="ok-btn">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="currentColor"
-                  viewBox="0 0 256 256">
+                  width="20" height="20" fill="currentColor" viewBox="0 0 256 256">
                   <rect width="256" height="256" fill="none"></rect>
                   <circle
                     cx="128"
@@ -26,7 +23,8 @@ const SearchOption = ({ onClose }) => {
                     fill="none"
                     stroke="currentColor"
                     strokeMiterlimit="10"
-                    strokeWidth="16"></circle>
+                    strokeWidth="16"
+                  ></circle>
                   <line
                     x1="160"
                     y1="96"
@@ -36,7 +34,8 @@ const SearchOption = ({ onClose }) => {
                     stroke="currentColor"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth="16"></line>
+                    strokeWidth="16"
+                  ></line>
                   <line
                     x1="160"
                     y1="160"
@@ -46,7 +45,8 @@ const SearchOption = ({ onClose }) => {
                     stroke="currentColor"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth="16"></line>
+                    strokeWidth="16"
+                  ></line>
                 </svg>
               </button>
             </div>
@@ -72,19 +72,29 @@ const SearchOption = ({ onClose }) => {
               <h3 className="mb-1">Search Result</h3>
               <ul className="[&>*:not(:last-child)]:border-b [&>*:not(:last-child)]:border-dashed  [&>*:not(:last-child)]:border-gray-100  dark:[&>*:not(:last-child)]:border-borderColor-dark">
                 <li className="group ">
-                  <Link className="  flex items-center justify-between py-5 font-medium" href="/services">
-                  ACCOUNT-BASED MARKETING
+                  <Link
+                    className="  flex items-center justify-between py-5 font-medium"
+                    href="/services"
+                  >
+                    ACCOUNT-BASED MARKETING
                     <FontAwesomeIcon icon={faAngleRight} />
                   </Link>
                 </li>
                 <li className="group">
-                  <Link href="/services" className="  flex items-center justify-between py-5 font-medium">
+                  <Link
+                    href="/services"
+                    className="  flex items-center justify-between py-5 font-medium"
+                  >
                     Financial Analysis <FontAwesomeIcon icon={faAngleRight} />
                   </Link>
                 </li>
                 <li className="group">
-                  <Link href="/services" className="flex items-center justify-between py-5 font-medium">
-                    INTELLIGENT B2B SOLUTIONS <FontAwesomeIcon icon={faAngleRight} />
+                  <Link
+                    href="/services"
+                    className="flex items-center justify-between py-5 font-medium"
+                  >
+                    INTELLIGENT B2B SOLUTIONS
+                    <FontAwesomeIcon icon={faAngleRight} />
                   </Link>
                 </li>
               </ul>
@@ -93,7 +103,7 @@ const SearchOption = ({ onClose }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SearchOption
+export default SearchOption;

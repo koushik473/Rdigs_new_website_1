@@ -1,14 +1,14 @@
-'use client'
+"use client";
 import Counter from '@/components/Counter'
 import FaqFullLayout from '@/components/FaqFullLayout'
 import NewsLetter from '@/components/NewsLetter'
 import PageHero from '@/components/heros/PageHero'
 import TestimonialSlider from '@/components/TestimonialSlider'
 import { teamData } from '@/data/data'
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
 import { fadeUpAnimation } from '@/data/animation'
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion"
 const Teams = () => {
   return (
     <>

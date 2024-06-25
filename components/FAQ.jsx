@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState } from 'react'
 import { FAQData } from '@/data/data'
 import FaqItem from './FaqItem'

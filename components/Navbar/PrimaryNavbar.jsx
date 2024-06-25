@@ -1,47 +1,46 @@
-import { menuData } from '@/data/data';
-import { cn } from '@/utils/cn';
-import { faAngleDown, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useEffect, useState } from 'react';
-import { createPortal } from 'react-dom';
-import SearchOption from '../SearchOption';
+import { menuData } from '@/data/data'
+import { cn } from '@/utils/cn'
+import { faAngleDown, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
+import SearchOption from '../SearchOption'
 
 const PrimaryNavbar = () => {
-  const [showSearch, setShowSearch] = useState(false);
-  const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const [sticky, setSticky] = useState(false);
+  const [showSearch, setShowSearch] = useState(false)
+  const [showMobileMenu, setShowMobileMenu] = useState(false)
+  const [sticky, setSticky] = useState(false)
 
   const handleStickyNavbar = () => {
     if (window.scrollY >= 20) {
-      setSticky(true);
+      setSticky(true)
     } else {
-      setSticky(false);
+      setSticky(false)
     }
-  };
+  }
 
   useEffect(() => {
-    window.addEventListener('scroll', handleStickyNavbar);
+    window.addEventListener('scroll', handleStickyNavbar)
 
     return () => {
-      window.removeEventListener('scroll', handleStickyNavbar);
-    };
-  }, []);
+      window.removeEventListener('scroll', handleStickyNavbar)
+    }
+  }, [])
 
   // Filter out specific menu items like 'Home 2' and 'Home 3'
   const filteredMenuContent = menuData.menuContent.filter(
-    (menuItem) => menuItem.title !== 'Home 2' && menuItem.title !== 'Home 3' && menuItem.title !== 'Home 1'
-  );
+    (menuItem) => menuItem.title !== 'Home 2' && menuItem.title !== 'Home 3' && menuItem.title !== 'Home 1',
+  )
 
   return (
     <>
       <header
         className={cn(
           'fixed left-0 z-50 w-full bg-transparent pt-8 transition-all duration-500 max-md:z-[500]',
-          sticky ? 'nav-sticky' : ''
-        )}
-      >
+          sticky ? 'nav-sticky' : '',
+        )}>
         <nav className="container flex items-center">
           <div className="nav-logo xl:min-w-[266px]">
             <Link href="/">
@@ -63,9 +62,8 @@ const PrimaryNavbar = () => {
                   <Link
                     href={menuItem.path}
                     className={cn(
-                      'flex items-center rounded-large border border-transparent px-5 py-[5px] font-Inter text-base font-medium capitalize leading-8 text-paragraph transition-colors duration-500 hover:border-borderColor hover:bg-white hover:duration-500 dark:text-white dark:hover:border-borderColor/10 dark:hover:bg-dark-200 lg:px-4 xl:px-5'
-                    )}
-                  >
+                      'flex items-center rounded-large border border-transparent px-5 py-[5px] font-Inter text-base font-medium capitalize leading-8 text-paragraph transition-colors duration-500 hover:border-borderColor hover:bg-white hover:duration-500 dark:text-white dark:hover:border-borderColor/10 dark:hover:bg-dark-200 lg:px-4 xl:px-5',
+                    )}>
                     {menuItem.title}
                   </Link>
                 ) : (
@@ -73,9 +71,8 @@ const PrimaryNavbar = () => {
                     <div
                       className={cn(
                         'flex items-center rounded-large border border-transparent px-5 py-[5px] font-Inter text-base font-medium capitalize leading-8 text-paragraph transition-colors duration-500 hover:border-borderColor hover:bg-white hover:duration-500 dark:text-white dark:hover:border-borderColor/10 dark:hover:bg-dark-200 lg:px-4 xl:px-5',
-                        menuItem.title === 'home' ? 'active' : ''
-                      )}
-                    >
+                        menuItem.title === 'home' ? 'active' : '',
+                      )}>
                       {menuItem.title === 'Home' ? (
                         <Link href="#">
                           <span>{menuItem.title}</span>
@@ -93,20 +90,15 @@ const PrimaryNavbar = () => {
                     {menuItem.submenu && menuItem.submenu.length > 0 && (
                       <ul className="absolute left-0 top-12 z-10 min-w-[250px] origin-top scale-y-0 rounded-md bg-white p-5 opacity-0 duration-500 group-hover:scale-y-100 group-hover:opacity-100 dark:bg-dark-200 [&>*:not(:first-child)]:mt-2.5 [&>*:not(:last-child)]:border-b [&>*:not(:last-child)]:border-dashed [&>*:not(:last-child)]:border-borderColor dark:[&>*:not(:last-child)]:border-borderColor-dark">
                         {menuItem.submenu
-                          .filter(
-                            (submenuItem) =>
-                              submenuItem.title !== 'Home 2' && submenuItem.title !== 'Home 3'
-                          )
+                          .filter((submenuItem) => submenuItem.title !== 'Home 2' && submenuItem.title !== 'Home 3')
                           .map((submenuItem) => (
                             <li
                               className="relative overflow-hidden pb-2.5 text-base capitalize text-paragraph duration-500 before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-full before:origin-right before:scale-x-0  before:bg-paragraph before:transition-transform before:duration-500 before:content-[''] before:hover:origin-left before:hover:scale-x-100 dark:before:bg-white"
-                              key={submenuItem.id}
-                            >
+                              key={submenuItem.id}>
                               <Link
                                 href={submenuItem.path}
                                 className="flex"
-                                onClick={() => setShowMobileMenu(!showMobileMenu)}
-                              >
+                                onClick={() => setShowMobileMenu(!showMobileMenu)}>
                                 {submenuItem.title}
                               </Link>
                             </li>
@@ -122,20 +114,16 @@ const PrimaryNavbar = () => {
           <ul className="ml-auto flex items-center [&>*:not(:last-child)]:me-2.5">
             <li className="">
               <button
-                onClick={() =>
-                  window.open('https://in.linkedin.com/company/rd-info-global-solutions', '_blank')
-                }
+                onClick={() => window.open('https://in.linkedin.com/company/rd-info-global-solutions', '_blank')}
                 className="rounded-full bg-white p-2.5 dark:bg-dark-200"
-                id="open-btn"
-              >
+                id="open-btn">
                 <svg
                   width="20"
                   height="20"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="fill-current text-blue-600 dark:text-blue-400"
-                >
+                  className="fill-current text-blue-600 dark:text-blue-400">
                   <path
                     fillRule="evenodd"
                     clipRule="evenodd"
@@ -152,15 +140,13 @@ const PrimaryNavbar = () => {
             <li className="max-lg:inline-block lg:hidden">
               <button
                 className="mobile-menu-button relative h-10 w-10 rounded-full bg-white outline-none dark:bg-dark-200"
-                onClick={() => setShowMobileMenu(!showMobileMenu)}
-              >
+                onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="fill-current text-paragraph"
                   width="22"
                   height="16"
-                  viewBox="0 0 22 16"
-                >
+                  viewBox="0 0 22 16">
                   <path
                     d="M0 1C0 0.447716 0.447715 0 1 0H21C21.5523 0 22 0.447716 22 1C22 1.55228 21.5523 2 21 2H1C0.447716 2 0 1.55228 0 1Z"
                     fill=""
@@ -184,8 +170,7 @@ const PrimaryNavbar = () => {
           <div className={`mobile-menu max-lg:overflow-y-auto ${showMobileMenu ? 'open' : ''}`}>
             <button
               className="navbar-toggle-close absolute right-6 top-5 h-10 w-10 rounded-full bg-white outline-none dark:bg-dark-200"
-              onClick={() => setShowMobileMenu(!showMobileMenu)}
-            >
+              onClick={() => setShowMobileMenu(!showMobileMenu)}>
               <FontAwesomeIcon icon={faTimes} />
             </button>
             <ul className="nav-list flex w-full max-w-[500px] flex-col gap-5 landscape:h-full">
@@ -196,18 +181,15 @@ const PrimaryNavbar = () => {
                       <Link
                         href={menuItem.path}
                         className={cn(
-                          'flex items-center rounded-large border border-transparent px-5 py-[5px] font-Inter text-base font-medium leading-8 text-paragraph transition-colors duration-500 hover:border-borderColor hover:bg-white hover:duration-500 dark:text-white dark:hover:border-borderColor/10 dark:hover:bg-dark-200 lg:px-4 xl:px-5'
+                          'flex items-center rounded-large border border-transparent px-5 py-[5px] font-Inter text-base font-medium leading-8 text-paragraph transition-colors duration-500 hover:border-borderColor hover:bg-white hover:duration-500 dark:text-white dark:hover:border-borderColor/10 dark:hover:bg-dark-200 lg:px-4 xl:px-5',
                         )}
-                        onClick={() => setShowMobileMenu(!showMobileMenu)}
-                      >
+                        onClick={() => setShowMobileMenu(!showMobileMenu)}>
                         {menuItem.title}
                       </Link>
                     </>
                   ) : (
                     <>
-                      <div
-                        className="flex items-center rounded-large border border-transparent px-5 py-[5px] font-Inter text-base font-medium leading-8 text-paragraph transition-colors duration-500 hover:border-borderColor hover:bg-white hover:duration-500 dark:text-white dark:hover:border-borderColor/10 dark:hover:bg-dark-200 lg:px-4 xl:px-5"
-                      >
+                      <div className="flex items-center rounded-large border border-transparent px-5 py-[5px] font-Inter text-base font-medium leading-8 text-paragraph transition-colors duration-500 hover:border-borderColor hover:bg-white hover:duration-500 dark:text-white dark:hover:border-borderColor/10 dark:hover:bg-dark-200 lg:px-4 xl:px-5">
                         {menuItem.title}
                         <FontAwesomeIcon
                           icon={faAngleDown}
@@ -217,20 +199,15 @@ const PrimaryNavbar = () => {
                       {menuItem.submenu && menuItem.submenu.length > 0 && (
                         <ul className="absolute left-0 top-12 z-10 min-w-[250px] origin-top scale-y-0 rounded-md bg-white p-5 opacity-0 duration-500 group-hover:scale-y-100 group-hover:opacity-100 dark:bg-dark-200 [&>*:not(:first-child)]:mt-2.5 [&>*:not(:last-child)]:border-b [&>*:not(:last-child)]:border-dashed [&>*:not(:last-child)]:border-borderColor dark:[&>*:not(:last-child)]:border-borderColor-dark">
                           {menuItem.submenu
-                            .filter(
-                              (submenuItem) =>
-                                submenuItem.title !== 'Home 2' && submenuItem.title !== 'Home 3'
-                            )
+                            .filter((submenuItem) => submenuItem.title !== 'Home 2' && submenuItem.title !== 'Home 3')
                             .map((submenuItem) => (
                               <li
                                 className="relative overflow-hidden pb-2.5 text-base capitalize text-paragraph duration-500 before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-full before:origin-right before:scale-x-0  before:bg-paragraph before:transition-transform before:duration-500 before:content-[''] before:hover:origin-left before:hover:scale-x-100 dark:before:bg-white"
-                                key={submenuItem.id}
-                              >
+                                key={submenuItem.id}>
                                 <Link
                                   href={submenuItem.path}
                                   className="flex"
-                                  onClick={() => setShowMobileMenu(!showMobileMenu)}
-                                >
+                                  onClick={() => setShowMobileMenu(!showMobileMenu)}>
                                   {submenuItem.title}
                                 </Link>
                               </li>
@@ -252,7 +229,7 @@ const PrimaryNavbar = () => {
       </header>
       {showSearch && createPortal(<SearchOption onClose={() => setShowSearch(false)} />, document.body)}
     </>
-  );
-};
+  )
+}
 
-export default PrimaryNavbar;
+export default PrimaryNavbar

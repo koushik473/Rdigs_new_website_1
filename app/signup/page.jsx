@@ -1,7 +1,7 @@
-'use client'
+"use client";
 import { fadeUpAnimation } from '@/data/animation'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
+import Link from "next/link";
+import { motion } from "framer-motion"
 import useWhileInView from '@/hooks/useWhileInView'
 import { useRef } from 'react'
 const Signup = () => {

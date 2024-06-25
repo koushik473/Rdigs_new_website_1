@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useState } from 'react'
 import BlogList from './BlogList'
 import BlogSidebar from './BlogSidebar'

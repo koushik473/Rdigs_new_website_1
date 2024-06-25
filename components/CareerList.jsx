@@ -1,5 +1,5 @@
 import getMarkDownData from '@/utils/getMarkDownData'
-import Link from 'next/link'
+import Link from "next/link";
 
 const CareerList = () => {
   const careerData = getMarkDownData('data/career')

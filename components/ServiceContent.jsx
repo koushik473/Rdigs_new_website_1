@@ -1,18 +1,19 @@
-'use client'
-import { ServiceData } from '@/data/data'
-import { faAngleRight, faX } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Image from 'next/image'
-import Link from 'next/link'
-import { useState } from 'react'
-import ReactPlayer from 'react-player'
+"use client";
+import { ServiceData } from "@/data/data";
+import { faAngleRight, faX } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import ReactPlayer from "react-player";
 
 const ServiceContent = ({ data }) => {
-  const [modal, setModal] = useState(false)
+  const [modal, setModal] = useState(false);
+
   const openModal = (e) => {
-    e.preventDefault()
-    setModal(!modal)
-  }
+    e.preventDefault();
+    setModal(!modal);
+  };
 
   return (
     <>
@@ -24,7 +25,12 @@ const ServiceContent = ({ data }) => {
                 <FontAwesomeIcon icon={faX} />
               </span>
               <div className="modal-video-align">
-                <ReactPlayer url={data.videoLink} className="modal-video-item" width="100%" height="100%" />
+                <ReactPlayer
+                  url={data.videoLink}
+                  className="modal-video-item"
+                  width="100%"
+                  height="100%"
+                />
               </div>
             </div>
           </div>
@@ -41,16 +47,23 @@ const ServiceContent = ({ data }) => {
 
           <div className="grid auto-rows-max grid-cols-12 gap-y-15 md:gap-8 lg:gap-16">
             <div className="self-start rounded-medium bg-white p-2.5 shadow-nav dark:bg-dark-200 max-md:static max-md:col-span-full max-md:hidden md:sticky md:top-20 md:col-span-6 lg:col-span-4">
-              <div className="rounded border border-dashed border-gray-100 px-10 pb-7 pt-9 dark:border-borderColor-dark ">
+              <div className="rounded border border-dashed border-gray-100 px-10 pb-7 pt-9 dark:border-borderColor-dark">
                 <h3 className="mb-3">Categories</h3>
-                <ul className="[&>*:not(:last-child)]:border-b [&>*:not(:last-child)]:border-dashed  [&>*:not(:last-child)]:border-gray-100  dark:[&>*:not(:last-child)]:border-borderColor-dark">
+                <ul className="[&gt;*:&not;(:last-child)]:border-b [&gt;*:&not;(:last-child)]:border-dashed  [&gt;*:&not;(:last-child)]:border-gray-100  dark:[&gt;*:&not;(:last-child)]:border-borderColor-dark">
                   {ServiceData?.map((services) => (
-                    <li className={`group ${services.slug === data.slug ? 'tabActive' : ''}`} key={services.id}>
+                    <li
+                      className={`group ${services.slug === data.slug ? "tabActive" : ""}`}
+                      key={services.id}
+                    >
                       <Link
                         className="relative flex items-center justify-between py-5 font-medium before:absolute before:bottom-0 before:left-0 before:h-[1px] before:w-full before:origin-right before:scale-x-0 before:bg-paragraph before:transition-transform  before:duration-500 before:content-[''] before:hover:origin-left before:hover:scale-x-100 dark:before:bg-white"
-                        href={`/services/${services.slug}`}>
+                        href={`/services/${services.slug}`}
+                      >
                         {services.title}
-                        <FontAwesomeIcon icon={faAngleRight} className="hidden group-[.tabActive]:block" />
+                        <FontAwesomeIcon
+                          icon={faAngleRight}
+                          className="hidden group-[.tabActive]:block"
+                        />
                       </Link>
                     </li>
                   ))}
@@ -75,7 +88,9 @@ const ServiceContent = ({ data }) => {
                 <p>{data.serviceExpectation}</p>
                 <ul>
                   {data.serviceExpectationList &&
-                    data.serviceExpectationList.map((items, index) => <li key={index}> {items.item} </li>)}
+                    data.serviceExpectationList.map((items, index) => (
+                      <li key={index}> {items.item} </li>
+                    ))}
                 </ul>
 
                 <div className="relative rounded-medium bg-white p-2.5 shadow-nav dark:bg-dark-200">
@@ -89,8 +104,14 @@ const ServiceContent = ({ data }) => {
                   <Link
                     href=""
                     onClick={openModal}
-                    className="absolute left-1/2 top-1/2 aspect-square w-[90px] -translate-x-1/2 -translate-y-1/2 max-md:w-15">
-                    <Image src="/images/services/play.svg" alt="play" className="rounded-full" fill={true} />
+                    className="absolute left-1/2 top-1/2 aspect-square w-[90px] -translate-x-1/2 -translate-y-1/2 max-md:w-15"
+                  >
+                    <Image
+                      src="/images/services/play.svg"
+                      alt="play"
+                      className="rounded-full"
+                      fill={true}
+                    />
                   </Link>
                 </div>
 
@@ -98,7 +119,9 @@ const ServiceContent = ({ data }) => {
                 <p>{data.serviceQualifications}</p>
                 <ul>
                   {data.serviceQualificationsList &&
-                    data.serviceQualificationsList.map((items, index) => <li key={index}> {items.item} </li>)}
+                    data.serviceQualificationsList.map((items, index) => (
+                      <li key={index}> {items.item}</li>
+                    ))}
                 </ul>
               </div>
             </div>
@@ -106,7 +129,7 @@ const ServiceContent = ({ data }) => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default ServiceContent
+export default ServiceContent;

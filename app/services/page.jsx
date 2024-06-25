@@ -17,7 +17,7 @@ export default function ServicePage() {
       />
       <Services sectionDetails={false} />
       <MembersCounter />
-      
+
       <NewsLetter />
     </>
   )

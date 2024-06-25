@@ -1,7 +1,7 @@
-'use client'
-import Image from 'next/image'
+"use client";
+import Image from "next/image";
 import React, { useRef } from 'react'
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion"
 import CareerImage from '../public/images/about/career.png'
 import { fadeUpAnimation } from '@/data/animation'
 import useWhileInView from '@/hooks/useWhileInView'

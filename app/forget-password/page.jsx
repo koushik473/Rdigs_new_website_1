@@ -1,8 +1,8 @@
-'use client'
+"use client";
 import NewsLetter from '@/components/NewsLetter'
 import { fadeUpAnimation } from '@/data/animation'
 import useWhileInView from '@/hooks/useWhileInView'
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion"
 import { useRef } from 'react'
 const ForgetPassword = () => {
   const ref = useRef(null)

@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { CounterData } from '@/data/data'
 import CounterAnimation from '@/utils/CounterAnimation'
 
